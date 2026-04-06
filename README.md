@@ -78,7 +78,51 @@ git clone https://github.com/<TON_USERNAME>/cicd2026.git
 cd cicd2026
 ```
 
----
+### 3.6. Créer la branche dev et qa à partir de la branche main
+
+```
+
+# ------------------------------------------------------------
+# Étape 1 : Se placer sur la branche main
+# ------------------------------------------------------------
+echo "➡ Passage à la branche main..."
+git checkout main
+
+# ------------------------------------------------------------
+# Étape 2 : Mettre main à jour avec GitHub
+# ------------------------------------------------------------
+echo "➡ Mise à jour de main depuis GitHub..."
+git pull origin main
+
+# ------------------------------------------------------------
+# Étape 3 : Créer la branche dev
+# ------------------------------------------------------------
+echo "➡ Création de la branche dev..."
+git branch dev
+
+# ------------------------------------------------------------
+# Étape 4 : Créer la branche qa
+# ------------------------------------------------------------
+echo "➡ Création de la branche qa..."
+git branch qa
+
+# ------------------------------------------------------------
+# Étape 5 : Envoyer les branches sur GitHub
+# ------------------------------------------------------------
+echo "➡ Envoi de la branche dev sur GitHub..."
+git push -u origin dev
+
+echo "➡ Envoi de la branche qa sur GitHub..."
+git push -u origin qa
+
+echo "🎉 Les branches dev et qa ont été créées et envoyées sur GitHub."
+
+# ------------------------------------------------------------
+# Étape 6 : Positionnement sur la branche de dv
+# ------------------------------------------------------------
+git checkout dev
+
+```
 
 ## 4. Structure du projet
 
