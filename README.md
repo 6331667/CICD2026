@@ -436,9 +436,17 @@ jobs:
 ---
 - Faire un test
 - construire l'image initial (Change dockerhub_username pour ton compte dockerhub)
-- sudo docker build -t dockerhub_username/hello-app:dev .
-- Faire un déploiement initial sur K3S sur les 3 namespace
-- Faite une nouvelle version du fichier deploiyement.yaml et changer la variable DOCKER_HUB_USERNAME pour la valeur.
+```
+docker login -u "ton User dockerHub"
+newgrp docker
+sudo usermod -aG docker $USER
+sudo groupadd docker
+docker build -t dockerhub_username/hello-app:dev .
+docker push dockerhub_username/hello-app:dev
+```
+<br>
+- Faire un déploiement initial sur K3S sur le namespace de dev
+- Faite une nouvelle version du fichier deploiyement.yaml et changer la variable DOCKER_HUB_ pour la valeur.
 - kubectl apply -f deploiyement.yaml
 
 ---
