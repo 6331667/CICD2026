@@ -435,8 +435,11 @@ jobs:
 
 ---
 - Faire un test
+- construire l'image initial 
+- docker build -t dockerhub_username/hello-app:dev .
 - Faire un déploiement initial sur K3S sur les 3 namespace
 - Faite une nouvelle version du fichier deploiyement.yaml et changer la variable DOCKER_HUB_USERNAME pour la valeur.
+- kubectl apply -f deploiyement.yaml
 
 ---
 #### 1.1 Création d’un runner self‑hosted GitHub Actions
