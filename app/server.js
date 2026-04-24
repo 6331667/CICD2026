@@ -4,12 +4,12 @@ const PORT = process.env.PORT || 3000;
 const ENV = process.env.APP_ENV || 'dev';
 
 const messages = {
-  dev: "Hello de l'environnement de DEV",
+  dev: "Hello de Danny",
   qa: "Hello de l'environnement de QA",
   prod: "Hello de l'environnement de PROD",
 };
 
-const message = messages[ENV] || "Hello de l'environnement de DEV";
+const message = messages[ENV] || "Hello de Danny 222";
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
