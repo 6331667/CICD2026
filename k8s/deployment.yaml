@@ -42,7 +42,7 @@ spec:
     app: hello-app
     env: qa
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 3000
       protocol: TCP
   type: ClusterIP
@@ -67,4 +67,4 @@ spec:
               service:
                 name: hello-app
                 port:
-                  number: 8080
+                  number: 80
